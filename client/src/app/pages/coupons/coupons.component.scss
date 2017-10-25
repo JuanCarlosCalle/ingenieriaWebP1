@@ -1,0 +1,71 @@
+$background-color: #232331;
+$outer: #F8F4F6 ;
+$outline: #DADFEB;
+$font-color: #757575;
+
+.card {
+  background-color: $outer;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  margin: {
+    left: 2em;
+    right: 2.5em;
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+
+
+    li {
+      padding: {
+        top: 0.7em;
+        bottom: 0.7em;
+        left: 1em;
+      }
+
+      border-bottom: {
+        style: solid;
+        width: 1px;
+        color: $outline;
+      };
+
+      input[type=checkbox] {
+        position: relative;
+        top: 3px;
+        outline: none;
+        transform: scale(1.5);
+      }
+
+      span {
+        padding-left: 1.5em;
+        font-size: 15px ;
+        color: $font-color;
+      }
+
+      & ~ li:last-child {
+
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+.circle {
+  position: relative;
+  top: -15px;
+  left: 46%;
+  background: $background-color;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+
+  i {
+    position: relative;
+    line-height: 1.2em;
+    color: white;
+    font-size: 2.5em;
+  }
+}
+

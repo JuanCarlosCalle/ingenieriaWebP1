@@ -1,0 +1,104 @@
+
+<!-- todo: add a title -->
+
+<section class="row-section">
+  <div class="container">
+    <div class="row-block">
+      <ul>
+        <ng-container *ngFor="let vendors of batch">
+          <ng-container *ngFor="let product of vendors.products">
+            <li>
+              <!-- todo:  add a modifiable quantity field -->
+
+              <div class="media">
+                <div class="media-left align-self-center">
+                      <img src="http://sonofabitbkk.com/wp-content/uploads/2015/11/img9s1.jpg">
+                </div>
+                <div class="media-body">
+                  <h4>{{product.name}} <small>{{product.vendorName}}</small></h4>
+                  <p>{{product.description}}</p>
+                </div>
+                <div class="media-right align-self-center">
+                  <div class="row">
+                    <div class="col">
+                      <a>$ {{product.price | number:'.0-2'}}</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ng-container>
+        </ng-container>
+        <!-- todo: get the index and call a method to modify the new price-->
+      </ul>
+
+      <section class="price-section">
+
+        <div class="row ml-auto">
+
+          <div class="col-sm-9">
+            <section class="coupon-section">
+
+              <span class="shipping">Envio domiciliario: </span>
+              <label class="switch">
+                <input type="checkbox" checked (click)="onCheckboxClicked()">
+                <span class="slider round"></span>
+              </label>
+
+              <div class="row coupon-list" *ngIf="vendorsIds.length">
+
+                <div class="col-md-auto mr-0">
+                  <span class="coupon-tag">Tienes cupones de: </span>
+                </div>
+
+                <div class="col-6 pl-0" >
+                  <a class="btn btn-coupon" *ngFor="let vendor of vendorsIds; let i = index"
+                  (click)="onCouponClicked(vendor, i)" [ngClass]="{'dismissed' :  !vendorsCoupon[i]}">{{vendorsName[i]}} </a>
+                </div>
+
+              </div>
+
+            </section>
+          </div>
+
+          <div class="col">
+            <div class="mt-auto">
+
+              <div class="d-flex justify-content-end">
+                <div class="tag mr-auto">Sub total</div>
+                <div class="value">${{subtotalPrice | number:'.0-2'}}</div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <div class="tag mr-auto">Envio</div>
+                <div class="value">${{shipping | number:'.0-2'}}</div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <div class="tag mr-auto">Descuento</div>
+                <div class="value">-${{discount | number:'.0-2'}}</div>
+              </div>
+
+              <div class="d-flex justify-content-end">
+                <div class="tag mr-auto">Total</div>
+                <div class="total value">${{totalPrice | number:'.2-2'}}</div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr style="background: #C8CCCF">
+
+      <div class="row">
+        <div class="footer ml-auto">
+          <button class="btn btn-continue">Seguir buscando</button>
+          <button class="btn btn-checkout">Comprar</button>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</section>

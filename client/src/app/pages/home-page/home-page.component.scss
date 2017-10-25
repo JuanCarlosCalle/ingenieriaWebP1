@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Kumar+One');
+
+.navbar {
+
+  margin: {
+    top: 1.5em;
+    right: 1em;
+  }
+
+  .username {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    padding-left: 1.5em;
+    font-weight: bold;
+  }
+
+  .nav-item {
+    height: 3em;
+
+    i {
+      font-size: 2em;
+      margin-left: 1.2em;
+    }
+
+    .count {
+      display: block;
+      top: -47px;
+      left:4em;
+      position: relative;
+      background: #F4646A;
+      color: #fff;
+      border-radius: 50%;
+      width: 26px;
+      height: 25px;
+      text-align: center;
+      line-height: 25px;
+      font-size: smaller;
+      font-weight: 800;
+    }
+  }
+}
+
+section {
+  width: 100%;
+  height: auto;
+  min-height: 100%;
+  padding: 30px 0;
+  position: absolute;
+  background: #C8CCCF;
+}
+
+.btn-default {
+  background: #232331;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+}
+
+.card {
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
+  border: none;
+  margin-bottom: 30px;
+
+  .card-img-top {
+    width: 100%;
+    height: auto;
+    max-height: 197px;
+  }
+
+  .card-body {
+    position: relative;
+    padding-top: 40px;
+  }
+
+}
+
+.custom-card {
+
+  .badge-box {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin-left: -50px;
+    text-align: center;
+
+    i {
+      background: #F4646A;
+      color: white;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      font-size: 20px;
+    }
+  }
+}
+
+// todo: check this rule
+
+.details {
+  padding-right: 5em;
+
+  i {
+    padding-left: 0.5em;
+    position: absolute;
+    text-align: center;
+    font-size: 40px;
+  }
+}
+
+.onMouseOver {
+  cursor: pointer;
+}
+
+.card-01.height-fix {
+  height: 455px;
+  overflow: hidden;
+}

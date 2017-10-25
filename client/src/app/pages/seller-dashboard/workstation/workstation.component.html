@@ -1,0 +1,31 @@
+<div class="row">
+  <!-- uncomment code for absolute positioning tweek see top comment in css -->
+  <!-- <div class="absolute-wrapper"> </div> -->
+  <!-- Menu -->
+  <div class="side-menu">
+
+    <div class="mt-5"></div>
+
+    <nav class="navbar-nav">
+      <div class="nav-item onMouseOver" [routerLink]="['inventory']"><i class="fa fa-eye "></i>
+        <span>Inventario</span>
+      </div>
+      <div class="nav-item onMouseOver" [routerLink]="['coupons']"><i class="fa fa-ticket "></i>
+        <span>Cupones</span>
+      </div>
+      <div class="nav-item onMouseOver"><i class="fa fa-th "></i>
+        <span>Reportes</span>
+      </div>
+    </nav>
+
+  </div>
+
+  <div class="container-fluid">
+    <div class="side-body">
+
+      <router-outlet></router-outlet>
+
+    </div>
+  </div>
+
+</div>

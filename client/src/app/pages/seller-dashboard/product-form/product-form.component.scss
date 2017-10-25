@@ -1,0 +1,121 @@
+section {
+  height: auto;
+  min-height: 100%;
+  background:  #eeeeee;
+}
+
+.bars-icon {
+  color: #bdbdbd;
+  font-size: 4em;
+  margin-left: -1.25em !important;
+}
+
+.left-arrow-icon {
+  color: #b0bec5;
+  padding-right: 5px;
+}
+
+.btn-default {
+  border: 2px solid #b0bec5;
+  margin-left: 15px;
+
+  span {
+    color: #b0bec5;
+    font-size: 14px;
+  }
+}
+
+.card {
+  border: 2px solid #b0bec5;
+  margin-bottom: 2em;
+
+  .header {
+    border-bottom: thin solid #bdbdbd;
+  }
+
+  .card-body {
+
+    color: #757575;
+
+    .title {
+      padding-left: 5px;
+      font-size: 10px;
+      font-weight: 700;
+    }
+
+    .sub-header {
+
+      margin-left: 2em;
+      margin-top: 3em;
+
+      .step {
+        color:  #b0bec5;
+        border: 1px solid #b0bec5;
+        border-radius: 50%;
+        padding: 20px 24px;
+        margin-right: 5px;
+        width: 30px;
+        height: 30px;
+      }
+
+      .title {
+        font-size: 20px;
+        font-weight: 100;
+      }
+    }
+
+    .form-group {
+      width: 60%;
+      margin-left: 6.5em;
+      margin-top: 2em;
+    }
+
+    .row-padding {
+      margin-left: 5.5em;
+
+      label {
+        font-size: 15px;
+      }
+    }
+  }
+
+  .footer {
+    margin: 2.5em;
+    position: relative;
+  }
+}
+
+.btn-upload {
+  background: #f5f5f5 !important;
+  border-color: #b0bec5;
+  padding: 0.5em 1em 0.8em;
+
+  i {
+    position: relative;
+    top: 2px;
+    color: #616161;
+    font-size: 1.5em;
+    padding-right: 5px;
+  }
+  span {
+    font-size: 13px;
+  }
+}
+
+.btn-submit {
+  color: white !important;
+  padding: 0.8em 2em 0.8em;
+  font-size: 13px;
+  background: #546e7a !important;
+  border-radius: 5px;
+  margin-right: 1em;
+}
+
+.btn-cancel {
+  color: #616161  !important;
+  border-color: #bdbdbd;
+  padding: 0.8em 2em 0.8em;
+  background: #eeeeee !important;
+  font-size: 13px;
+}
+

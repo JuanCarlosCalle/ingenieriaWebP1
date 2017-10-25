@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "59e22044cab3f527365b9e45",
+    "name": "portatil",
+    "description": "expensive",
+    "quantity": 1,
+    "price": 1,
+    "id_vendor": "59e205b79e4ee71e3ee7bf34",
+    "__v": 0
+  },
+  {
+    "_id": "59e22050cab3f527365b9e46",
+    "name": "reloj",
+    "description": "fancy",
+    "quantity": 1,
+    "price": 1,
+    "id_vendor": "59e205b79e4ee71e3ee7bf34",
+    "__v": 0
+  },
+  {
+    "_id": "59e2884fb1efa45586e75ea5",
+    "name": "mouse",
+    "description": "high-end",
+    "price": 0,
+    "quantity": 0,
+    "id_vendor": "59e205b79e4ee71e3ee7bf34",
+    "__v": 0
+  },
+  {
+    "_id": "59e28bf3b1efa45586e75ea6",
+    "name": "Sony headphones",
+    "description": "Ultra bash",
+    "price": 120000,
+    "quantity": 3,
+    "id_vendor": "59e205b79e4ee71e3ee7bf34",
+    "__v": 0
+  }
+]

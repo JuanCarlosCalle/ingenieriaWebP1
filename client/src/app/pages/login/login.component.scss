@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+section {
+  width: 100%;
+  height: 100%;
+  background: #232331;
+}
+
+.login-card {
+  padding-top: 10em;
+
+  .card-body {
+    border-top: 5px solid #F4646A;
+    padding: 0 5em 5em;
+  }
+
+  .title {
+    text-align: center;
+    color: #263238;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 2em 0;
+  }
+
+  .tile-body {
+    padding: 1.5rem;
+  }
+
+
+  .form-input {
+    $form-margin-bottom: 1rem;
+    $label-font-size: 1rem;
+    $label-font-size-focus: .85rem;
+    $label-icon-spacing: 2.25rem;
+    $input-padding-top: 1.5rem;
+    $input-padding-right: 0;
+    $input-padding-bottom: .5rem;
+    $input-padding-left: 0;
+    $input-underline-color: #868e96;
+    $highlight-color: #F4646A;
+
+    display: block;
+    position: relative;
+    margin-bottom: $form-margin-bottom;
+
+    .material-icons {
+      position: absolute;
+      font-size: 1.5rem;
+      top: 1.2rem;
+
+      & ~ input, & ~ .label, & ~ .underline {
+        margin-left: $label-icon-spacing;
+        width: calc(100% - #{$label-icon-spacing});
+      }
+    }
+
+    input {
+      border: none;
+      box-shadow: none;
+      padding: {
+        top: $input-padding-top;
+        right: $input-padding-right;
+        bottom: $input-padding-bottom;
+        left: $input-padding-left;
+      }
+      outline-style: none;
+      width: 100%;
+
+      & ~ .label {
+        color: $input-underline-color;
+        font-size: $label-font-size;
+        pointer-events: none;
+        position: absolute;
+        top: $input-padding-top;
+        left: $input-padding-left;
+        transition: top .2s, font .2s;
+      }
+
+      & ~ .underline {
+        background-color: lighten($input-underline-color, 20%);
+        height: 1px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+      }
+
+      &:focus {
+        & ~ .underline {
+          background-color: $highlight-color;
+          height: 2px;
+        }
+
+        & ~ .label {
+          color: $highlight-color;
+        }
+      }
+
+      &:focus, &:valid {
+        & ~ .label {
+          top: 0;
+          font-size: $label-font-size-focus;
+        }
+      }
+
+      &:-webkit-autofill {
+        & ~ .label {
+          top: 0;
+          font-size: $label-font-size-focus;
+        }
+      }
+    }
+  }
+
+  .btn-section {
+    text-align: center;
+    padding: {
+      top: 1em
+    }
+
+    button {
+      width: 100%;
+      padding: 1em;
+      background: #F4646A;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      span {
+        font-size: 17px;
+        font-weight: 600;
+        color: white;
+      }
+
+      & ~ span {
+        font-size: 12px;
+      }
+    }
+
+    .bad-request {
+      padding-top: 1.5em;
+      font-size: small;
+      font-weight: bold;
+      color: #3F568B;
+    }
+  }
+
+  .card-footer {
+    padding: 1.5em 0;
+    text-align: center;
+    font-size: 15px;
+
+    .new-account {
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      color: #F4646A;
+    }
+  }
+}
+
+

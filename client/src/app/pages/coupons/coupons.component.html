@@ -1,0 +1,14 @@
+
+<ngb-alert *ngIf="message" (close)="message = null">{{message}}</ngb-alert>
+
+<div class="card mt-5">
+    <ul>
+      <li *ngFor="let client of clients; let i = index">
+        <input type="checkbox" (change)="addCoupon(client._id)">
+        <span  class="user">{{client.username}}</span>
+      </li>
+    </ul>
+</div>
+<div class="circle onMouseOver" (click)="sendCoupons()"><i class="fa fa-check"></i></div>
+
+

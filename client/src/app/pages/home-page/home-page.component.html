@@ -1,0 +1,52 @@
+<div>
+  <nav class="navbar navbar-light navbar-expand-md">
+
+    <div class="navbar-nav" *ngIf="username">
+      <div class="nav-item username">{{username}}</div>
+    </div>
+
+    <div class="navbar-nav ml-auto">
+      <div class="nav-item">
+        <i class="fa fa-shopping-cart onMouseOver" routerLink="/cart-list" routerLinkActive="active"></i>
+        <span class="count">{{itemsInCart}}</span>
+      </div>
+
+      <div class="nav-item" *ngIf="!username" >
+        <i class="fa fa-sign-in onMouseOver" routerLink="/login" routerLinkActive="active"></i>
+      </div>
+      <div class="nav-item" *ngIf="username" style="color: #D94C44;">
+        <i class="fa fa-sign-out onMouseOver"  (click)="logOut()" routerLinkActive="active"></i>
+      </div>
+    </div>
+  </nav>
+</div>
+
+<section>
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-4" *ngFor="let product of products">
+
+          <div class="card custom-card">
+            <img class="card-img-top onMouseOver"
+                 src="http://localhost:3000/{{product.image}}"
+                 alt="Card image cap">
+
+            <div class="card-body">
+              <span class="badge-box"><i class="fa fa-plus onMouseOver"></i></span>
+              <h4 class="card-title">{{product.name}}</h4>
+              <p>{{product.price}} <i class="fa fa-usd"></i></p>
+
+              <div class="row">
+                <div class="mr-auto"></div>
+                <div class="details">
+                  <a href="#" class="btn btn-default text-uppercase onMouseOver">Comprar</a>
+                  <i class="fa fa-cart-plus onMouseOver" (click)="addToCart(product._id)"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+</section>
